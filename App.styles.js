@@ -1,28 +1,28 @@
 import { StyleSheet } from "react-native";
 
- const title = StyleSheet.create({
-  color: "red"
- });
-
- const subtitle = StyleSheet.create({
-  color: "blue"
- })
-
  const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000000',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
-    color: "#fff"
+    color: "red"
   },
   subtitle: {
-    color: "#fff",
-    fontSize: 24
-  }
+    color: "blue",
+    fontSize: 24,
+  },
+  inputText: {
+    color:"white",
+    height: 40,
+    margin: 12,
+    borderWidth: 10,
+    padding: 10,
+    borderColor: "#000000",
+  },
+
 });
 
 export default styles
-export {title, subtitle}
