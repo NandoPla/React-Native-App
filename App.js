@@ -1,23 +1,65 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, TextInput } from 'react-native';
-import React from 'react';
+import { Alert, AppRegistry, Button, StyleSheet, Text, View, SafeAreaView, TextInput } from 'react-native';
+import React, { Component } from 'react';
 import styles from './App.styles'
 
-export default function App() {
+ function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Esse é o título principal</Text>
-      <Text style={styles.subtitle}>novo texto</Text>
-      <StatusBar style="light" />
+      <StatusBar style="auto" />
+      <Text style={styles.title}>BEM VINDO AO CONTADOR</Text>
+      <Text style={styles.subtitle}></Text>
       <TextInput style={TextInputExample}></TextInput>
     </View>
   );
 }
 
+export default class ButtonBasics extends Component {  
+  onPressButton() {  
+      Alert.alert('You clicked the button!')  
+  }  
+
+  render() {  
+      return (
+        
+          <View style={styles.container}>
+
+            <View style={styles.container}>
+              <StatusBar style="auto" />
+              <Text style={styles.title}>BEM VINDO AO CONTADOR</Text>
+              <Text style={styles.subtitle}></Text>
+              <TextInput style={TextInputExample}></TextInput>
+            </View>
+              <View style={styles.buttonContainer}>  
+                  <Button  
+                      onPress={this.onPressButton}  
+                      title="Somar 1"  
+                  />  
+              </View>  
+              <View style={styles.buttonContainer}>  
+                  <Button  
+                      onPress={this.onPressButton}  
+                      title="Subtrair 1"  
+                      color="red"  
+                  />  
+              </View>  
+              <View style={styles.multiButtonContainer}>  
+                  <Button  
+                      onPress={this.onPressButton}  
+                      title="Reset"  
+                      color="green"  
+                  />  
+              </View>  
+          </View>  
+      );  
+  }  
+}  
+
+
+
+//input text
 const TextInputExample = () => {
   const [text, onChangeText] = React.useState();
-  const [number, onChangeNumber] = React.useState();
-
   return (
     <View>
       <TextInput
@@ -31,3 +73,4 @@ const TextInputExample = () => {
     </View>
   );
 };
+

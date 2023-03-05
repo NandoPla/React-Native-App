@@ -3,12 +3,14 @@ import { StyleSheet } from "react-native";
  const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000000',
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
-    color: "red"
+    color: "white",
+    fontSize: 25,
+    fontWeight: "bold"
   },
   subtitle: {
     color: "blue",
@@ -22,7 +24,14 @@ import { StyleSheet } from "react-native";
     padding: 10,
     borderColor: "#000000",
   },
-
+  buttonContainer: {  
+    margin: 20  
+  },  
+  multiButtonContainer: {  
+    margin: 20,  
+    flexDirection: 'row',  
+    justifyContent: 'space-between'  
+  }
 });
 
 export default styles
