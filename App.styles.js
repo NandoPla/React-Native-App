@@ -31,6 +31,13 @@ import { StyleSheet } from "react-native";
     margin: 20,  
     flexDirection: 'row',  
     justifyContent: 'space-between'  
+  },
+  clickButton: {
+    marginTop: 10,
+    backgroundColor: "white",
+  },
+  text: {
+    fontSize: 24,
   }
 });
 
