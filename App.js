@@ -16,14 +16,9 @@ export default function App() {
       <Text style={styles.subtitle}></Text>
       <TextInput style={TextInputExample}></TextInput>
 
-      <Button color={{backgroundColor:"blue"}}>asssassas</Button>
-      <Button>asssassas</Button>
-      <Button>asssassas</Button>
-      <Button>asssassas</Button>
-      <Button>asssassas</Button>
-      <Button>asssassas</Button>
-      <Button>asssassas</Button>
-      
+      <Button color={{backgroundColor:"green"}}>Somar</Button>
+      <Button color={{backgroundColor:"red"}}>Subtrair</Button>
+      <Button color={{backgroundColor:"yellow"}}>Reset</Button>
     </View>
   );
 }
