@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
   },
   fontSizeText:{
     fontSize: 25,
-    color: "white"
+    color: "white",
+    fontFamily: "Arial",
   },
 })
 

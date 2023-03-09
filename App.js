@@ -5,19 +5,26 @@ import styles from './App.styles';
 import { useState } from 'react';
 import { Button } from './components/Button';
 
+/*com parametro, passa arrow function*/
 export default function App() {
 
   const [valor, setValor] = useState(0);
 
+  function handleSum(){
+    setValor(num => num + 1)
+  }
+
+  function handleSubt(){
+    setValor(num => num - 1)
+  }
+
+
   function handlePress(id){
-    if(id === 'buttomSum'){
-      setValor(num => num + 1);
-    } else if(id === 'buttomSubtraction'){
-      setValor(num => num - 1)
-    } else if(id === 'buttomReset') {
+    if(id === 'buttomReset') {
       setValor(num => 0)
     }
   }
+
   return(
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -25,10 +32,9 @@ export default function App() {
       <Text style={{color: "white"}}>
         {valor}
       </Text>
-
-      <Button handlePress={handlePress('buttomSum')} color={{backgroundColor:"green"}}>Somar</Button>
-      <Button handlePress={handlePress('buttomSubtraction')} color={{backgroundColor:"red"}}>Subtrair</Button>
-      <Button handlePress={handlePress('buttomReset')} color={{backgroundColor:"yellow"}}>Reset</Button>
+      <Button handlePress={handleSum} color={{backgroundColor:"green"}}>Somar</Button>
+      <Button handlePress={handleSubt} color={{backgroundColor:"red"}}>Subtrair</Button>
+      <Button handlePress={() => handlePress('buttomReset')} color={{backgroundColor:"blue"}}>Reset</Button>
     </View>
   );
 }
