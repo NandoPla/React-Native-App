@@ -9,7 +9,7 @@ import { StyleSheet } from "react-native";
   },
   title: {
     color: "white",
-    fontSize: 25,
+    fontSize: 28,
     fontWeight: "bold"
   },
   subtitle: {

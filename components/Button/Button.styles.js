@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
   fontSizeText:{
     fontSize: 25,
     color: "white",
-    fontFamily: "Arial",
   },
 })
 
